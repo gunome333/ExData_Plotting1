@@ -20,6 +20,6 @@ glob_act_power <- as.numeric(period_house_power$Global_active_power)
 power_time <- period_house_power$Time
 
 #plot 1
-hist(glob_act_power, col="red", xlim=c(0,8), las=2, breaks=20, xlab = "Global Active Power (kilowatts)")
+hist(glob_act_power, col="red", xlim=c(0,8), las=2, breaks=20, xlab = "Global Active Power (kilowatts)", main = "Global Active Power")
 dev.copy(png,'plot1.png')
 dev.off()

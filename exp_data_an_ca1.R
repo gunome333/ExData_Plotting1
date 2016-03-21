@@ -9,6 +9,7 @@ house_power$Date = as.Date(house_power$Date,"%d/%m/%Y")
 #We will only be using data from the dates 2007-02-01 and 2007-02-02.
 #Date: Date in format dd/mm/yyyy
 mydates <- as.Date(c("02/02/2007", "01/02/2007"), "%d/%m/%Y")
+subSetData <- data[data$Date %in% c("1/2/2007","2/2/2007") ,]
 period_house_power <- with(house_power, house_power[(house_power$Date ==  mydates[1])|(house_power$Date ==  mydates[2]),])
 period_house_power$Time = strptime(paste(period_house_power$Date, period_house_power$Time), "%Y-%m-%d %H:%M:%S")
 
